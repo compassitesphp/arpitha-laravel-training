@@ -7,7 +7,7 @@
     <h2>Enter the Employee details</h2>
     <br><br>
     <body>
-        <form action="doInsert" method="GET">
+        <form action="insertData" method="GET">
             Name:
             <input type="text" name="employee_name" required>
             <br><br>
@@ -17,7 +17,7 @@
             <br><br>
 
             Department: 
-            <input type="text" name="Department" />
+            <input type="text" name="employee_department" />
             <br><br>
 
             <input type="submit" value="Insert" />

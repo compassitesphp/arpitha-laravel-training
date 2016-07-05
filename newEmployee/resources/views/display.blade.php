@@ -32,24 +32,12 @@
                         <td> {{ $employeeData->id }} </td>
                         <td> {{ $employeeData->employee_name }} </td>
                         <td> {{ $employeeData->employee_email }} </td>
-                        <td> {{ $employeeData->Department }}</td>
+                        <td> {{ $employeeData->employee_department }}</td>
 
                         <!--<a href="http://localhost:8000/display">http://localhost:8000/display</a>-->
 
-                        <td><input type="submit" value="Edit"/></td>
-                        <td><form action="employee/{{ $employeeData->id }}/delete" method="POST">
-
-                                <td><input type="submit" value="Delete"/></td>
-
-
-                                <!--                <form action="doDelete" method="GET">-->
-
-
-
-                                <!--                               <a href="http://localhost:8000/display">http://localhost:8000/display</a>-->
-                            </form>
-
-
+                        <td>Edit</td>
+                        <td>Delete</td>
                     </tr>
                     @endforeach
                 </tbody>
@@ -57,14 +45,10 @@
         </div> 
        
         <div class='container'>
-            <input type="submit" value="Insert"/>
-            <form action="employee/{{ $employeeData->employee_name }}/insert" method="POST">
-                <form action="employee/{{ $employeeData->employee_email }}/insert" method="POST"> 
-                    <form action="employee/{{ $employeeData->Department }}/insert" method="POST">          
-                    </form>
-                    </div>
-                    </body>
-                    </html>
+            <a href="/insert">Insert Record</a>
+        </div>
+    </body>
+</html>
 
 
 

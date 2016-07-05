@@ -17,7 +17,12 @@ Route::get('/as','CustomController@Add');
 Route::get('/z','CustomController@Sub');
 Route::get('/pa/{name?}','myController@third');
 
-Route::get('/list','CustomController@listEmployees');
+//Modified by shan
+Route::get('/list','EmployeeController@listEmployees');
+Route::get('/insert','EmployeeController@insertEmployee');
+Route::get('/insertData','EmployeeController@insertData');
+//End modifications by Shan
+
 Route::get('/create','CustomController@insertData');
 Route::get('/display','CustomController@listData');
 //Route::get('/doInsert','CustomController@doInsert');
