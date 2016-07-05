@@ -10,12 +10,19 @@ class myController extends Controller
 {
     function First()
     {
-    echo "My frist controller is displayed";
+    echo "All facts are interesting<br/>";
     }
     
     function second()
     {
-        //echo "Many Functions are created";
+        //echo "Many Functions are created<br/>";
         return view('firstview');
     }
+    function third($fact="no facts")
+    {
+        echo "Intresting Facts!!! $fact<br/>";
+        $this->First();
+        $this->second();
+    }
+    
 }
