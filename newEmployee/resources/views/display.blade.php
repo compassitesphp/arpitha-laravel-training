@@ -37,27 +37,37 @@
                         <!--<a href="http://localhost:8000/display">http://localhost:8000/display</a>-->
 
                         <td><input type="submit" value="Edit"/></td>
-                <form action="doDelete" method="GET">
-                    <!--<td><form action="employee/{{ $employeeData->id }}/delete" method="POST">-->
+                        <td><form action="employee/{{ $employeeData->id }}/delete" method="POST">
 
-                    <td><input type="submit" value="Delete"/>
-                        s<!--<a href="http://localhost:8000/display">http://localhost:8000/display</a>-->
-                </form>
+                                <td><input type="submit" value="Delete"/></td>
 
-                </td>
-                </tr>
-                @endforeach
+
+                                <!--                <form action="doDelete" method="GET">-->
+
+
+
+                                <!--                               <a href="http://localhost:8000/display">http://localhost:8000/display</a>-->
+                            </form>
+
+
+                    </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div> 
+       
         <div class='container'>
-            <form action="doInsert" method="GET">
-                <input type="submit" value="Insert"/>
+            <input type="submit" value="Insert"/>
+            <form action="employee/{{ $employeeData->employee_name }}/insert" method="POST">
+                <form action="employee/{{ $employeeData->employee_email }}/insert" method="POST"> 
+                    <form action="employee/{{ $employeeData->Department }}/insert" method="POST">          
+                    </form>
+                    </div>
+                    </body>
+                    </html>
 
 
-            </form>
 
-        </div>
 
-    </body>
-</html>
+
+
