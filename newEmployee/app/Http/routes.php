@@ -17,20 +17,17 @@ Route::get('/as','CustomController@Add');
 Route::get('/z','CustomController@Sub');
 Route::get('/pa/{name?}','myController@third');
 
+Route::get('/create','CustomController@insertData');
+Route::post('/display','CustomController@listData');
+
 //Modified by shan
 Route::get('/list','EmployeeController@listEmployees');
+
 Route::get('/insert','EmployeeController@insertEmployee');
 Route::get('/insertData','EmployeeController@insertData');
 //End modifications by Shan
 
-Route::get('/create','CustomController@insertData');
-Route::get('/display','CustomController@listData');
-//Route::get('/doInsert','CustomController@doInsert');
-//Route::get('/doUpdate','CustomController@doUpdate');
-//Route::get('/doInsert','CustomController@handleInsert');
-//Route::get('/delete','CustomController@doDelete');
+Route::get('/{id}/edit','EmployeeController@doEdit');
+Route::post('/update','EmployeeController@UpdateEmployee');
 
-Route::post('/employee/{id}/delete','CustomController@doDelete');
-Route::post('/doInsert', 'CustomController@doInsert');
-//Route::get('/employee/{id,employee_name,employee_email,Department}/insert','CustomController@doInsert');
-Route::post('employee/{id}', 'CustomController@storeInsert');
+Route::get('{id}/delete','EmployeeController@deleteEmployee');
