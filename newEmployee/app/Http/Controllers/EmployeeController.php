@@ -32,15 +32,15 @@ class EmployeeController extends Controller {
 
     function doEdit($id) {
         $employee = new Employee;
-        $emp = $employee->find($id);
-        $data['employeeId'] = $employee->id;
-        $data['employeeName'] = $employee->employee_name;
-        $data['employeeEmail'] = $employee->employee_email;
-        $data['employeeDepartment'] = $employee->employee_department;
+        $emp = $employee->where('id',$id)->first();
+        $data['employeeId'] = $emp->id;
+        $data['employeeName'] = $emp->employee_name;
+        $data['employeeEmail'] = $emp->employee_email;
+        $data['employeeDepartment'] = $emp->employee_department;
         return view('update', $data);
     }
 
-    function updateEmployee() {
+    function updateEmployee(Request $request) {
         $employeeName = $request->input('employee_name');
         $employeeEmail = $request->input('employee_email');
         $employeeDepartment = $request->input('employee_department');

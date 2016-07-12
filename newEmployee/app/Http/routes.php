@@ -28,6 +28,6 @@ Route::get('/insertData','EmployeeController@insertData');
 //End modifications by Shan
 
 Route::get('/{id}/edit','EmployeeController@doEdit');
-Route::post('/update','EmployeeController@UpdateEmployee');
+Route::post('/update','EmployeeController@updateEmployee');
 
 Route::get('{id}/delete','EmployeeController@deleteEmployee');
